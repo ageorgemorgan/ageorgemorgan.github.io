@@ -172,7 +172,7 @@ $$
     \end{align*}
 $$
 
-since $e^{n\vert| y \vert|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
+since $e^{n\vert y \vert}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
 
 $$
     \lim_{n\rightarrow\infty}|u_{n}(x,y)| = +\infty
