@@ -182,3 +182,4 @@ which admits the trivial solution $u\equiv 0$. However, $u_{n}(x,y)$ obviously c
  
 &nbsp;&nbsp;&nbsp;&nbsp; In practice, it's useful to think of the continuity requirement in the well-posedness definition as a very weak version of <b>stability</b>. In this problem, we have effectively shown that the trivial solution $u\equiv 0$ of \eqref{eqn:BVP_inf} is unstable: if we pick $n\gg1$, then the Cauchy data in \eqref{eqn:BVP} is very close to zero (pointwise), but the solution $u_{n}$ is very far from $0$ (pointwise). 
 
+{% bibliography --cited %}
