@@ -1,7 +1,7 @@
 ---
 math: true
 title: "Analytic Issues with Laplace's Equation Part 2: Hadamard's Example of Ill-Posedness"
-date: 2025-06-09
+date: 2026-04-28
 categories: [Math, Analysis of PDEs, Elliptic Theory]
 tags: [elliptic equations, regularity theory]     # TAG names should always be lowercase
 ---
@@ -172,7 +172,7 @@ $$
     \end{align*}
 $$
 
-since $e^{n\lvert|y\rvert|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
+since $e^{n\vert| y \vert|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
 
 $$
     \lim_{n\rightarrow\infty}|u_{n}(x,y)| = +\infty
