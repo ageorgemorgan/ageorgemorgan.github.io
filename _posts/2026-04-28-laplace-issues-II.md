@@ -80,7 +80,7 @@ $$
     \end{align*}
 $$
 
-Now, $u|_{y=0}=0$ immediately implies $B_{1}=0$. For the other condition, we compute 
+Now, $u\vert_{y=0}=0$ immediately implies $B_{1}=0$. For the other condition, we compute 
 
 $$
     \begin{align*}
@@ -105,7 +105,7 @@ $$
      \end{align*}
 $$
 
-Again, $u|_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
+Again, $u\vert_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
 
 $$
     \begin{align*}
@@ -172,7 +172,7 @@ $$
     \end{align*}
 $$
 
-since $e^{n|y|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
+since $e^{n\lvert|y\rvert|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
 
 $$
     \lim_{n\rightarrow\infty}|u_{n}(x,y)| = +\infty
