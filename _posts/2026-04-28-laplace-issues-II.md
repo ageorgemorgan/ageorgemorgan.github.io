@@ -57,19 +57,16 @@ $$
 $$
 Thus we have converted the PDE into two ODEs:
 $$
-    \begin{subequations}
-        \label{eqn:separated_ODEs}
             \begin{align}
                 X'' &= \phantom{-}\mu X, \label{eqn:ODE_x}
                 \\
                 Y'' &= -\mu Y. \label{eqn:ODE_y}
             \end{align}
-    \end{subequations}
 $$
 We must now consider two cases depending on the sign of the separation constant $\mu$. 
 
 ### Case 1: $\mu>0$
-Right away, we know that $\mu=\lambda^2$ for $\lambda>0$. Then, the general solutions of the ODEs in \eqref{eqn:separated_ODEs} are 
+Right away, we know that $\mu=\lambda^2$ for $\lambda>0$. Then, the general solutions of \eqref{eqn:ODE_x}, \eqref{eqn:ODE_y} are 
 $$
     \begin{align*}
         X(x) &= A_{1}\cosh\left(\lambda x\right) + A_{2}\sinh\left(\lambda x\right),
@@ -79,26 +76,28 @@ $$
 $$
 Now, $u|_{y=0}=0$ immediately implies $B_{1}=0$. For the other condition, we compute 
 $$
-\begin{align*}
-    u_{y}|_{y=0} &= X(x)Y'(0) 
-    \\
-    &= \left[A_{1}\cosh\left(\lambda x\right) + A_{2}\sinh\left(\lambda x\right)\right]\lambda B_{2}
-    \\
-    &= \frac{1}{n} \sin\left(nx\right). 
-\end{align*}
+    \begin{align*}
+        u_{y}|_{y=0} &= X(x)Y'(0) 
+        \\
+        &= \left[A_{1}\cosh\left(\lambda x\right) + A_{2}\sinh\left(\lambda x\right)\right]\lambda B_{2}
+        \\
+        &= \frac{1}{n} \sin\left(nx\right). 
+    \end{align*}
 $$
 However, $\cosh(\lambda x), \sin(\lambda x)$, and $\sin(nx)$ are linearly independent, so there is no way the above expression can hold. We conclude that this case ($\mu>0$) is impossible. 
 
 ### Case 2: $\mu \leq 0$
-Write $\mu=-\lambda^2$ for $\lambda\geq0$. The ODEs in \eqref{eqn:separated_ODEs} have general solutions 
+Write $\mu=-\lambda^2$ for $\lambda\geq0$. The ODEs in \eqref{eqn:ODE_x}, \eqref{eqn:ODE_y} have general solutions 
 $$
     \begin{align*}
             X(x) &= A_{1}\cos\left(\lambda x\right) + A_{2}\sin\left(\lambda x\right),
             \\
             Y(y) &= B_{1}\cosh\left(\lambda y\right) + B_{2}\sinh\left(\lambda y\right).
-        \end{align*}
-        $u|_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
-        \begin{align*}
+     \end{align*}
+$$
+$u|_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
+$$
+    \begin{align*}
         u_{y}|_{y=0} &= X(x)Y'(0) 
         \\
         &= \left[A_{1}\cos\left(\lambda x\right) + A_{2}\sin\left(\lambda x\right)\right]\lambda B_{2}
