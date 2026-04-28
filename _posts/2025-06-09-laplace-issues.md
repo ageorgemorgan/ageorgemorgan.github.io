@@ -1,8 +1,7 @@
 ---
 math: true
 title: "Analytic Issues with Laplace's Equation Part 1: Loss of Regularity"
-date: 2025-06<img width="285" height="202" alt="Screenshot from 2026-04-28 16-26-18" src="https://github.com/user-attachments/assets/de3e7fdc-2be7-4ce6-836e-e850f77c741e" />
--09 +0500 
+date: 2025-06-09
 categories: [Math, Analysis of PDEs, Elliptic Theory]
 tags: [elliptic equations, regularity theory]     # TAG names should always be lowercase
 ---
