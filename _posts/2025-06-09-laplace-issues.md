@@ -20,15 +20,15 @@ $$
 $$
 $$\Omega$$ therefore represents a wedge when $\beta\leq \pi$
 
-<p align="center">
+<div align="center">
   <img width="285" height="202" alt="Screenshot from 2026-04-28 16-26-18" src="https://github.com/user-attachments/assets/e48fa5e7-7cc2-42b2-b503-4ae62366876e" />
-</p>
+</div>
 
 ... or a "Pac-Man" shape when $\beta>\pi$:
 
-<p align="center">
+<div align="center">
   <img width="278" height="266" alt="Screenshot from 2026-04-28 16-26-35" src="https://github.com/user-attachments/assets/6a013e21-14b9-499f-a5f6-bb59725782de" />
-</p>
+</div>
 
 We then consider the boundary value problem of finding $$u\colon \overline{\Omega}\rightarrow\mathbb{R}$$ such that, for a given continuous function $$g(\theta),$$ 
 $$
