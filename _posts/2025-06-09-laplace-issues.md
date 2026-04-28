@@ -1,7 +1,8 @@
 ---
 math: true
 title: "Analytic Issues with Laplace's Equation Part 1: Loss of Regularity"
-date: 2025-06-09 +0500 
+date: 2025-06<img width="285" height="202" alt="Screenshot from 2026-04-28 16-26-18" src="https://github.com/user-attachments/assets/de3e7fdc-2be7-4ce6-836e-e850f77c741e" />
+-09 +0500 
 categories: [Math, Analysis of PDEs, Elliptic Theory]
 tags: [elliptic equations, regularity theory]     # TAG names should always be lowercase
 ---
@@ -18,7 +19,17 @@ $$
     \Omega \doteq \left\{0< r< a, \ 0<\theta<\beta\right\}.
   \end{equation}
 $$
-$$\Omega$$ therefore represents a wedge when $\beta\leq \pi$ or a "Pac-Man" shape when $\beta>\pi$. 
+$$\Omega$$ therefore represents a wedge when $\beta\leq \pi$
+
+<p align="center">
+  <img width="285" height="202" alt="Screenshot from 2026-04-28 16-26-18" src="https://github.com/user-attachments/assets/e48fa5e7-7cc2-42b2-b503-4ae62366876e" />
+</p>
+
+... or a "Pac-Man" shape when $\beta>\pi$:
+
+<p align="center">
+  <img width="278" height="266" alt="Screenshot from 2026-04-28 16-26-35" src="https://github.com/user-attachments/assets/6a013e21-14b9-499f-a5f6-bb59725782de" />
+</p>
 
 We then consider the boundary value problem of finding $$u\colon \overline{\Omega}\rightarrow\mathbb{R}$$ such that, for a given continuous function $$g(\theta),$$ 
 $$
