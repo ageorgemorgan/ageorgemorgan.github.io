@@ -79,9 +79,7 @@ $$
         Y(y) &= B_{1}\cos\left(\lambda y\right) + B_{2}\sin\left(\lambda y\right).
     \end{align*}
 $$
-
 Now, $u|_{y=0}=0$ immediately implies $B_{1}=0$. For the other condition, we compute 
-
 $$
     \begin{align*}
         u_{y}|_{y=0} &= X(x)Y'(0) 
@@ -105,7 +103,7 @@ $$
      \end{align*}
 $$
 
-$u|_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
+Again, $u|_{y=0}=0$ implies $B_{1}=0$, and the other condition yields 
 
 $$
     \begin{align*}
@@ -171,9 +169,7 @@ $$
         &= +\infty,
     \end{align*}
 $$
-
 since $e^{n|y|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
-
 $$
     \lim_{n\rightarrow\infty}|u_{n}(x,y)| = +\infty
 $$
@@ -184,7 +180,7 @@ $$
     \mathcal{S} = \left\{y= 0 \ \text{or} \ \frac{x}{\pi}\in \mathbb{Q}\right\}. 
 $$
 
-In the jargon of measure theory, $\mathcal{S}$ is said to be a <b>null set</b>: it has Lebesgue measure zero and therefore covers zero area (think if $\mathcal{S}$ as a collection of isolated dust particles lying on top of a piece of paper). So, as $n\rightarrow \infty$, $u_{n}(x,y)$ blows up almost everywhere: we cannot even make sense of the ``pointwise limit" as an element of $L^{\infty}\left(\mathbb{R}^2\right)$, the space of Lebesgue-measurable functions that are finite almost everywhere!
+In the jargon of measure theory, $\mathcal{S}$ is said to be a <b>null set</b>: it has Lebesgue measure zero and therefore covers zero area (think if $\mathcal{S}$ as a collection of isolated dust particles lying on top of a piece of paper). So, as $n\rightarrow \infty$, $u_{n}(x,y)$ blows up almost everywhere: we cannot even make sense of the "pointwise limit" as an element of $L^{\infty}\left(\mathbb{R}^2\right)$, the space of Lebesgue-measurable functions that are finite almost everywhere!
 
 &nbsp;&nbsp;&nbsp;&nbsp; Why does this blowup imply ill-posedness of \eqref{eqn:BVP}? First notice that the Cauchy data obeys
 
