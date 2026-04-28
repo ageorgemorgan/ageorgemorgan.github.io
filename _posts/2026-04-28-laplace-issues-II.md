@@ -79,7 +79,9 @@ $$
         Y(y) &= B_{1}\cos\left(\lambda y\right) + B_{2}\sin\left(\lambda y\right).
     \end{align*}
 $$
+
 Now, $u|_{y=0}=0$ immediately implies $B_{1}=0$. For the other condition, we compute 
+
 $$
     \begin{align*}
         u_{y}|_{y=0} &= X(x)Y'(0) 
@@ -169,7 +171,9 @@ $$
         &= +\infty,
     \end{align*}
 $$
+
 since $e^{n|y|}$ blows up faster than $n^{2}$ (for instance, by L'Hopital's rule) and sine is bounded. We conclude that
+
 $$
     \lim_{n\rightarrow\infty}|u_{n}(x,y)| = +\infty
 $$
