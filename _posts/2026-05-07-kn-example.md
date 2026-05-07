@@ -83,13 +83,14 @@ Uniqueness of the Kirchhoff solution then follows from a simple energy argument.
 
 #### <b>Case 1: $|t|\geq 1$.</b> 
 
-By hypothesis and the Kirchhoff formula, $u(x,t)$ depends only on the values of $F$ and $G$ on    $\partial B(x,|t|) \cap B(0,R)$: $F,G$ vanish at all other points in $\partial B(x,|t|)$. Now, notice that the largest sphere that can be inscribed inside the closure $\overline{B(0,R)}$ is simply $\partial B(0,R)$. Therefore, 
+By hypothesis and the Kirchhoff formula, $u(x,t)$ depends only on the values of $F$ and $G$ on $\partial B(x,\vert t\vert) \cap B(0,R)$: $F,G$ vanish at all other points in $\partial B(x,\vert t\vert)$. Now, notice that the largest sphere that can be inscribed inside the closure $\overline{B(0,R)}$ is simply $\partial B(0,R)$. Therefore, 
 
 $$ 
-    \text{Area}\left(\partial B(x,|t|) \cap B(0,R)\right)\leq  \text{Area}\left(\partial B(0,R)\right)=4\pi R^2. 
+    \text{Area}\left(\partial B(x,\vert t\vert) \cap B(0,R)\right)\leq  \text{Area}\left(\partial B(0,R)\right)=4\pi R^2. 
 $$
 
 With this observation in mind, we have  
+
 $$ 
     \begin{align*}
         |u(x,t)| &\leq \frac{1}{4\pi t^2} \oint_{\partial B(x,|t|) \cap B(0,R)} |F(y)| + |\nabla F(y)| \ |y-x| + |t| \ |G(y)| \ \mathrm{d} S(y)
@@ -122,7 +123,7 @@ $$
     \end{align}
 $$ 
 
-where we have used $|t|<1$ to obtain the last line. We conclude by observing that, for $|t|<1$ and $R>1$, we automatically have $1< R^2/|t|$. 
+where we have used $\vert t\vert<1$ to obtain the last line. We conclude by observing that, for $\vert t\vert<1$ and $R>1$, we automatically have $1< R^2/\vert t\vert$. 
 
 Putting both these cases together, the proof is finished. $\square$ 
 
@@ -222,12 +223,19 @@ $$
 
 #### <b>Case 2: $|t|< 1$.</b>
 
-Here we can't use \eqref{eqn:wave_eqn_decay} directly. Instead, we go back to the intermediary result \eqref{eqn:important_intermediate} in the proof of proposition \ref{prop:wave_eqn_decay}, which tells us that $$\|u(\cdot, t)\|_{C_{b}\left(\mathbb{R}^3\right)}<1$$ provided
+Here we can't use \eqref{eqn:wave_eqn_decay} directly. Instead, we go back to the intermediary result \eqref{eqn:important_intermediate} in the proof of our proposition, which tells us that $$\|u(\cdot, t)\|_{C_{b}\left(\mathbb{R}^3\right)}<1$$ provided
+
 $$
     \left\|F\right\|_{C^{1}_{b}\left(\mathbb{R}^3\right)} + \left\|G\right\|_{C_{b}\left(\mathbb{R}^3\right)} < 1. 
 $$
 
-Putting both these cases together and using that $R>1$, we find that $\|u(\cdot, t)\|_{C_{b}\left(\mathbb{R}^3\right)}<1$ for all $t\neq 0$ *if we impose the smallness condition \eqref{eqn:smallness_condition}*. So, provided \eqref{eqn:smallness_condition} holds, we can define $v(x,t)$ by \eqref{eqn:u_to_v} and get a global-in-time solution to \eqref{eqn:nlw_kn} as outlined above. $\square$
+Putting both these cases together and using that $R>1$, we find that 
+
+$$
+    \left\|u(\cdot, t)\right\|_{C_{b}\left(\mathbb{R}^3\right)}<1
+$$ 
+
+for all $t\neq 0$ *if we impose the smallness condition* \eqref{eqn:smallness_condition}. So, provided \eqref{eqn:smallness_condition} holds, we can define $v(x,t)$ by \eqref{eqn:u_to_v} and get a global-in-time solution to \eqref{eqn:nlw_kn} as outlined above. $\square$
 
 &nbsp; &nbsp; &nbsp; &nbsp; Notice again how the size of the initial data played into our analysis, but this time for the better. For most interesting nonlinear evolution equations, small initial data are unlikely to give rise to blowup, and they also tend to keep useful norms of the initial data "nice". For this reason, you'll often go to modern PDE talks where the speaker focuses entirely on small initial data. 
 
