@@ -30,9 +30,16 @@ Following {% cite Klainerman1980 %} we'll show that, if $f,g$ are compactly supp
 Before beginning in earnest, we need to define norms to quantify what we mean by "small enough" initial data. 
 
 ### Definition 
-- We denote the set of continuous, bounded, real-valued functions on $$\mathbb{R}^3$$ by $$C_{b}\left(\mathbb{R}^3\right)$$. This becomes a normed real vector space when we define $$\left\|f\right\|_{C_{b}\left(\mathbb{R}^3\right)} \doteq \sup_{x\in \mathbb{R}^3}\left|f(x)\right|$$.
+- We denote the set of continuous, bounded, real-valued functions on $$\mathbb{R}^3$$ by $$C_{b}\left(\mathbb{R}^3\right)$$. This becomes a normed real vector space when we define 
+$$
+    \left\|f\right\|_{C_{b}\left(\mathbb{R}^3\right)} \doteq \sup_{x\in \mathbb{R}^3}\vert f(x)\vert.
+$$
 
-- If $$\mathbf{V}\colon \mathbb{R}^3 \rightarrow\mathbb{R}^3$$ is a vector field with entries in $$C_{b}\left(\mathbb{R}^3\right)$$, we define $$\left\|\mathbf{V}\right\|_{C_{b}\left(\mathbb{R}^3\right)} \doteq \sup_{x\in \mathbb{R}^3}\left|\mathbf{V}(x)\right|$$ where $$\left|\mathbf{V}(x)\right|$$ is the Euclidean norm of $$\mathbf{V}(x)$$. 
+- If $$\mathbf{V}\colon \mathbb{R}^3 \rightarrow\mathbb{R}^3$$ is a vector field with entries in $$C_{b}\left(\mathbb{R}^3\right)$$, we define
+$$
+    \left\|\mathbf{V}\right\|_{C_{b}\left(\mathbb{R}^3\right)} \doteq \sup_{x\in \mathbb{R}^3}\vert\mathbf{V}(x)\vert
+$$ 
+where $$\vert\mathbf{V}(x)\vert$$ is the Euclidean norm of $$\mathbf{V}(x)$$. 
 
 - We define $$C^{1}_{b}\left(\mathbb{R}^3\right)$$ to be the subspace of $$C_{b}\left(\mathbb{R}^3\right)$$ consisting of those bounded continuous functions $$f(x)$$ whose gradients $$\nabla f(x)$$ have entries in $$C_{b}\left(\mathbb{R}^3\right)$$. We put another norm on this space by defining $$\left\|f\right\|_{C^{1}_{b}\left(\mathbb{R}^3\right)} \doteq  \left\|f\right\|_{C_{b}\left(\mathbb{R}^3\right)}+ \left\|\nabla f\right\|_{C_{b}\left(\mathbb{R}^3\right)}$$. 
 
@@ -77,9 +84,11 @@ Uniqueness of the Kirchhoff solution then follows from a simple energy argument.
 #### <b>Case 1: $|t|\geq 1$.</b> 
 
 By hypothesis and the Kirchhoff formula, $u(x,t)$ depends only on the values of $F$ and $G$ on    $\partial B(x,|t|) \cap B(0,R)$: $F,G$ vanish at all other points in $\partial B(x,|t|)$. Now, notice that the largest sphere that can be inscribed inside the closure $\overline{B(0,R)}$ is simply $\partial B(0,R)$. Therefore, 
+
 $$ 
     \text{Area}\left(\partial B(x,|t|) \cap B(0,R)\right)\leq  \text{Area}\left(\partial B(0,R)\right)=4\pi R^2. 
 $$
+
 With this observation in mind, we have  
 $$ 
     \begin{align*}
@@ -100,6 +109,7 @@ so this case is all done.
 #### <b>Case 2: $|t|< 1$.</b> 
 
 As in the previous case, we apply the Kirchhoff formula to estimate 
+
 $$ 
     \begin{align}
         |u(x,t)| &\leq \frac{1}{4\pi t^2} \oint_{\partial B(x,|t|)} |F(y)| + |\nabla F(y)| \ |y-x| + |t| \ |G(y)| \ \mathrm{d} S(y) \nonumber
@@ -111,6 +121,7 @@ $$
         &< \left\|F\right\|_{C^{1}_{b}}+ \left\|G\right\|_{C_{b}}, \label{eqn:important_intermediate}
     \end{align}
 $$ 
+
 where we have used $|t|<1$ to obtain the last line. We conclude by observing that, for $|t|<1$ and $R>1$, we automatically have $1< R^2/|t|$. 
 
 Putting both these cases together, the proof is finished. $\square$ 
@@ -141,6 +152,7 @@ $$
 Note that this inverse is only well-defined if $u>-1$. 
 
 &nbsp; &nbsp; &nbsp; &nbsp; Let's pretend we have found a $v(x,t)$ solving \eqref{eqn:nlw_kn}. What IVP $u(x,t)$ does satisfy? A direct computation shows that 
+
 $$
     \begin{align*}
         u_{t} &= v_{t}e^{v}
@@ -148,7 +160,9 @@ $$
         u_{x_{i}} &= v_{x_{i}}e^{v}, \quad i=1,2,3
     \end{align*}
 $$
+
 so 
+
 $$
     \begin{align*}
         u_{tt} &= \left[v_{tt}+(v_{t})^2\right]e^{v}
@@ -156,7 +170,9 @@ $$
         u_{x_{i}} &=  \left[v_{x_{i}x_{i}}+(v_{x_{i}})^2\right]e^{v}, \quad i=1,2,3. 
     \end{align*}
 $$
+
 Using the nonlinear wave equation satisfied by $v$ then gives 
+
 $$
     \begin{align*}
         0 &= \left[u_{tt}e^{-v}-(v_{t})^2\right] -\left((\Delta u) e^{-v}- |\nabla u|^2\right)  +\left(v_{t}\right)^2-|\nabla_{x} v|^2
@@ -164,14 +180,18 @@ $$
         &= e^{-v}\left[u_{tt}-\Delta u\right].
     \end{align*}
 $$
+
 Therefore, $u$ satisfies the linear wave equation 
+
 $$
     \begin{equation}
         \label{eqn:kn_u_is_lw}
         u_{tt}-\Delta u =0 \quad \forall \ (x,t) \in \mathbb{R}^3\times \mathbb{R}. 
     \end{equation}
 $$
+
 Now, we check what initial conditions $u$ satisfies. By inspection of the ICs in \eqref{eqn:nlw_kn}, we see that 
+
 $$
     \begin{align}
         u|_{t=0} &= F(x) \doteq e^{f(x)}-1, \label{eqn:ICs_nlwa}
@@ -179,6 +199,7 @@ $$
         u_{t}|_{t=0} &= G(x) \doteq g(x)e^{f(x)} \label{eqn:ICs_nlwb}. 
     \end{align}
 $$
+
 Since $f, g$ are supported in $B(0,R)$, we find that $F, G$ are supported in this ball as well. In summary, we have shown that if $v(x,t)$ solving \eqref{eqn:nlw_kn} exists then its corresponding $u(x,t)$ satisfies \eqref{eqn:wave_ivp} with $F, G$ supported inside $B(0,R)$. By reversing the computations performed above, we can likewise show that if 
 
 - $$ u(x,t) $$ solves \eqref{eqn:wave_ivp} with the particular $$F, G$$ defined in \eqref{eqn:ICs_nlwa}, \eqref{eqn:ICs_nlwb} and
@@ -187,7 +208,7 @@ Since $f, g$ are supported in $B(0,R)$, we find that $F, G$ are supported in thi
 
 then $v$ defined by \eqref{eqn:u_to_v} solves \eqref{eqn:nlw_kn}. This gives us a recipe for constructing $v(x,t)$ explicitly by solving the linear wave equation and then bounding its solution!
 
-&nbsp; &nbsp; &nbsp; &nbsp; So, let's define $u$ to be the solution of \eqref{eqn:wave_ivp} guaranteed to exist (and decay in time) by our earlier proposition. We now split into two cases depending on the size of $|t|$. 
+&nbsp; &nbsp; &nbsp; &nbsp; So, let's define $u$ to be the solution of \eqref{eqn:wave_ivp} guaranteed to exist (and decay in time) by our earlier proposition. We now split into two cases depending on the size of $$\vert t \vert$$. 
 
 #### <b>Case 1: $|t|\geq 1$.</b> 
 
