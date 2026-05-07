@@ -192,3 +192,5 @@ Since $f, g$ are supported in $B(0,R)$, we find that $F, G$ are supported in thi
 Putting both these cases together and using that $R>1$, we find that $\|u(\cdot, t)\|_{C_{b}\left(\mathbb{R}^3\right)}<1$ for all $t\neq 0$ *if we impose the smallness condition \eqref{eqn:smallness_condition}*. So, provided \eqref{eqn:smallness_condition} holds, we can define $v(x,t)$ by \eqref{eqn:u_to_v} and get a global-in-time solution to \eqref{eqn:nlw_kn} as outlined above. $\square$
 
 &nbsp; &nbsp; &nbsp; &nbsp; Notice again how the size of the initial data played into our analysis, but this time for the better. For most interesting nonlinear evolution equations, small initial data are unlikely to give rise to blowup, and they also tend to keep useful norms of the initial data "nice". For this reason, you'll often go to modern PDE talks where the speaker focuses entirely on small initial data. 
+
+{% bibliography --cited %}
