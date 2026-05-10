@@ -25,6 +25,13 @@ This starter bundles those files from the latest **Chirpy** release along with a
 
 Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
+**COMMENTS BY AGM FOR AGM**
+
+- Rememeber that you can test on the local w/ `bundle exec jekyll serve`
+- Make sure to use [RVM](https://rvm.io/) to work w/ a version of ruby acceptable to Chirpy! 
+- If it's been awhile since you've run the site, try deleting `Gemfile.lock` and then `bundle install`
+- Sometimes the [json gem causes weird NameErrors](https://blog.rubatic.com/posts/fixing-uninitialized-constant-json-fragment-nameerror)! If such errors occur, `gem uninstall json --force` and then `bundle install` again.  
+
 ## Contributing
 
 This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
