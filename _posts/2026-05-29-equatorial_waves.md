@@ -513,7 +513,7 @@ $$
 The functions $D_n(\eta)$ in \eqref{eqn:qho_solns} are sometimes called **parabolic cylinder functions**, up to a choice of normalization. Here is a sketch of the first few $D_n$:
 
 <div align="center">
-  <img width="625" height="625" src="assets/img/pcf.png" />
+  <img width="625" height="625" alt="pcf_plot" src="assets/img/pcf.png" />
 </div>
 
 This plot substantiates our decay/oscillation transition intuition from earlier! Additionally, the illustration shows that that $D_n$ goes through $(n+1)/2$ "wavelengths" before it begins to decay. Note also that the constraint of integer $\lambda$ implies our dispersion relation is parameterized: \eqref{eqn:lambda_defn} implies 
@@ -678,7 +678,7 @@ $$
 The figure below, adapted from figure 4.23 in {% cite AHL1987 %}, summarizes these dispersion relations visually.
 
 <div align="center">
-  <img width="625" height="625" src="assets/img/eq_waves_dispersion.png" />
+  <img width="625" height="625" alt="eq_waves_dispersion_relation" src="assets/img/eq_waves_dispersion.png" />
 </div>
 
 For an analogue of this plot valid in the (tropospherically relevant) case of *no vertical propagation*, see figure 8.6 in {% cite Vallis2017 %}. 
