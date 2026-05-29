@@ -1,7 +1,7 @@
 ---
 math: true
 title: "Introduction to Equatorial Waves in the Stratosphere"
-date: 2026-05-15
+date: 2026-05-29
 categories: [Applied Math, Waves, Atmospheric Dynamics]
 tags: [atmospheric dynamics, middle atmosphere, fluid mechanics, waves]     # TAG names should always be lowercase
 ---
