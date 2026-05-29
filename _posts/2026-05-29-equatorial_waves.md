@@ -556,7 +556,7 @@ $$
     \end{equation}
 $$
 
-If $c<0$ then the Kelvin wave geopotential $\Phi$ is unphysical and not equatorially localized. If $c=0$, $\Phi$ is not even defined! Therefore, for Kelvin waves, we must have $c>0$, corresponding to \emph{eastward} zonal phase propagation. In light of \eqref{eqn:kelvin_upward_branch}, this means $m<0$ is necessary for upward propagation. Finally, notice how rotational effects only appear in the meridional structure function: $\beta$ and $c$ control the extent of equatorial localization. 
+If $c<0$ then the Kelvin wave geopotential $\Phi$ is unphysical and not equatorially localized. If $c=0$, $\Phi$ is not even defined! Therefore, for Kelvin waves, we must have $c>0$, corresponding to *eastward* zonal phase propagation. In light of \eqref{eqn:kelvin_upward_branch}, this means $m<0$ is necessary for upward propagation. Finally, notice how rotational effects only appear in the meridional structure function: $\beta$ and $c$ control the extent of equatorial localization. 
 
 ### Yanai/Mixed
 
@@ -603,7 +603,7 @@ Accordingly, these waves have a zonal phase speed strictly greater than that of 
 
 ### Poincaré/Rossby
 
-Our discussion of these modes is very brief: see \cite{AHL1987} or \cite{Vallis2017} for additional details. These auxiliary waves appear when $n>0$ in \eqref{eqn:eq_wave_disperion_relation}. Notice that this dispersion relation is \emph{quadratic} in $\langle m\rangle$, hence the quadratic formula gives
+Our discussion of these modes is very brief: see {% cite AHL1987 %} or {% cite Vallis2017 %} for additional details. These auxiliary waves appear when $n>0$ in \eqref{eqn:eq_wave_disperion_relation}. Notice that this dispersion relation is *quadratic* in $\langle m\rangle$, hence the quadratic formula gives
 
 $$
     \begin{equation}
@@ -685,7 +685,7 @@ For an analogue of this plot valid in the (tropospherically relevant) case of *n
 
 ### Propagation Conditions
 
-To end this basic coverage of equatorial waves in the stratosphere, we introduce conditions under which Kelvin and Yanai waves can propagate in a nontrivial background flow. This is a baby step towards understanding the Holton-Lindzen-Plumb theory of the quasi-biennial oscillation or QBO \cite{AHL1987, Baldwin2001}: I hope to return to the subject of QBO modelling in a future post. For simplicity, let's assume $\vert 2Hm\vert\gg 1$ for this last little part of our discussion. 
+To end this basic coverage of equatorial waves in the stratosphere, we introduce conditions under which Kelvin and Yanai waves can propagate in a nontrivial background flow. This is a baby step towards understanding the Holton-Lindzen-Plumb theory of the quasi-biennial oscillation or QBO {% cite AHL1987 %}, {% cite Baldwin2001 %}: I hope to return to the subject of QBO modelling in a future post. For simplicity, let's assume $\vert 2Hm\vert\gg 1$ for this last little part of our discussion. 
 
 &nbsp; &nbsp; &nbsp; &nbsp; Now, all the above developments trivially generalize to a situation with a constant zonal background flow 
 
