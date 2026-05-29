@@ -50,7 +50,7 @@ $$
 
 This $5\times 5$ system of nonlinear PDE is certainly familiar to every student of atmospheric science. In the context of middle atmosphere applications, however, alternatives to isobaric coordinates are a common sight. For example, one can justifiably use isentropic coordinates owing to the strong static stability characterizing the stratosphere. In these notes, we use **log-pressure** coordinates since they result in a simplification of \eqref{eqn:isobaric_thermo} where the static stability parameter $S_p$ no longer appears (see {% cite Holton2004 %}, section 8.4.1). 
 
-The vertical log-pressure coordinate $z$ is defined with respect to a
+&nbsp; &nbsp; &nbsp; &nbsp; The vertical log-pressure coordinate $z$ is defined with respect to a
 choice of **scale height** $H>0$ and **surface pressure** $p_s>0$ as
 
 $$
@@ -71,7 +71,7 @@ $$
 
 the motivation for this choice comes from solving the equation of hydrostatic balance in an isothermal atmosphere where $T\equiv T_S$.
 
-Next, we collect some preliminary results and definitions required to convert \eqref{eqn:isobaric_momentum}-\eqref{eqn:isobaric_thermo} to log-pressure coordinates. First and most importantly, the multivariable chain rule tells us how to change vertical coordinates.
+&nbsp; &nbsp; &nbsp; &nbsp; Next, we collect some preliminary results and definitions required to convert \eqref{eqn:isobaric_momentum}-\eqref{eqn:isobaric_thermo} to log-pressure coordinates. First and most importantly, the multivariable chain rule tells us how to change vertical coordinates.
 
 $$
     \begin{equation}
@@ -115,9 +115,10 @@ $$
     \widetilde{N}^2 = \left(\frac{T}{T_s}\right)^2 N^2.
     \end{equation}
 $$ 
+
 One often encounters literature where $\widetilde{N}^2$ is denoted by $N^2$, and you should be careful about this notation difference to avoid headaches when verifying calculations. Note that, for an isothermal atmosphere, $\widetilde{N}^2 = N^2$: by now, you should realize that log-pressure coordinates work well when deviations from isothermality are small.
 
-With all of these preliminaries taken care of, we can write the primitive equations in log-pressure coordinates as 
+&nbsp; &nbsp; &nbsp; &nbsp; With all of these preliminaries taken care of, we can write the primitive equations in log-pressure coordinates as 
 
 $$
     \begin{alignat}{3}
@@ -152,7 +153,7 @@ $$
 $$
 
 Owing to the simple relationship \eqref{eqn:bvf_to_bf}, \eqref{eqn:log_pressure_thermo} is much easier to understand than its isobaric coordinate counterpart \eqref{eqn:isobaric_thermo}. 
-\par For the wave analysis presented below, we elect to eliminate $T, w$ from \eqref{eqn:eqns_in_logp_coords} to get a reduced $3\times 3$ system for $u,v, \Phi$. If we use \eqref{eqn:log_pressure_thermo} to write $w$ in terms of $T$ and then use \eqref{eqn:log_pressure_hydrostatic_balance} to write $T$ in terms of $\Phi$, the primitive equations become 
+\par For the wave analysis presented below, we elect to eliminate $T, w$ from the above system to get a reduced $3\times 3$ system for $u,v, \Phi$. If we use \eqref{eqn:log_pressure_thermo} to write $w$ in terms of $T$ and then use \eqref{eqn:log_pressure_hydrostatic_balance} to write $T$ in terms of $\Phi$, the primitive equations become 
 
 $$
     \begin{alignat}{2}
@@ -511,11 +512,229 @@ $$
 
 The functions $D_n(\eta)$ in \eqref{eqn:qho_solns} are sometimes called **parabolic cylinder functions**, up to a choice of normalization. Here is a sketch of the first few $D_n$:
 
+<div align="center">
+  <img width="625" height="625" src="assets/img/pcf.png" />
+</div>
 
+This plot substantiates our decay/oscillation transition intuition from earlier! Additionally, the illustration shows that that $D_n$ goes through $(n+1)/2$ "wavelengths" before it begins to decay. Note also that the constraint of integer $\lambda$ implies our dispersion relation is parameterized: \eqref{eqn:lambda_defn} implies 
 
-This plot substantiates our decay/oscillation transition intuition from earlier! Additionally, the illustration shows that that $D_n$ goes through $(n+1)/2$ "wavelengths" before it begins to decay.
+$$
+    \begin{equation}
+        \label{eqn:eq_wave_disperion_relation}
+        \frac{\omega^2\langle m\rangle^2}{\widetilde{N}^2}-k^2 -\frac{k\beta}{\omega} = (2n+1)\frac{\beta \langle m\rangle}{\widetilde{N}}, \quad n= 0,1,2,... \quad . 
+    \end{equation}
+$$
 
+## Wave Spectrum 
 
+Here, we analyze the wave solutions computed in the previous section in greater detail, paying attention to the various branches of the dispersion relation. 
 
+### Kelvin 
+
+These waves are characterized by having a vanishing meridional velocity disturbance $\widehat{v}=0$. Therefore, their dispersion relation is given by \eqref{eqn:kelvin_dispersion_relation}, which is very similar to that of midlatitude gravity waves {% cite Vallis 2017 %}, section 17.2.2. Since we are primarily interested in upward-propagating waves, we typically focus only on the branch 
+
+$$
+    \begin{equation}
+        \label{eqn:kelvin_upward_branch}
+        \omega = -\frac{k\widetilde{N}}{\langle m\rangle} = -\frac{k\widetilde{N}}{m\sqrt{1 +\vert 2Hm \vert^{-2}}}
+    \end{equation}
+$$
+
+since this corresponds to an upward group velocity in the limit $\vert 2H m\vert 
+\rightarrow + \infty$. The geopotential for Kelvin waves obeys 
+
+$$
+    \Phi(x,y,z,t) = \exp\left[\frac{z}{H}-\frac{\beta ky^2}{2\omega}\right] \Re\left\{\widehat{\Phi_0} \ e^{i(kx+mz-\omega t)}\right\}
+$$
+
+where $k,m,\omega$ are constrained by \eqref{eqn:kelvin_upward_branch}. Define the zonal phase speed by 
+
+$$
+    \begin{equation}
+        \label{eqn:kelvin_zonal_phase_speed}
+        c = \omega/k.
+    \end{equation}
+$$
+
+If $c<0$ then the Kelvin wave geopotential $\Phi$ is unphysical and not equatorially localized. If $c=0$, $\Phi$ is not even defined! Therefore, for Kelvin waves, we must have $c>0$, corresponding to \emph{eastward} zonal phase propagation. In light of \eqref{eqn:kelvin_upward_branch}, this means $m<0$ is necessary for upward propagation. Finally, notice how rotational effects only appear in the meridional structure function: $\beta$ and $c$ control the extent of equatorial localization. 
+
+### Yanai/Mixed
+
+These are the simplest waves with a nonzero meridional velocity perturbation. They correspond to the $n=0$ branch of the dispersion relation \eqref{eqn:eq_wave_disperion_relation}. By recognizing a difference of squares, we can write the dispersion relation along this branch as 
+
+$$
+    \begin{equation}
+        \label{eqn:yanai_simplified_dispersion}
+        \omega\left(\langle m\rangle\omega + \widetilde{N}k\right)\left(\langle m\rangle\omega -\widetilde{N}k\right) = \beta\widetilde{N}\left(\langle m\rangle\omega + \widetilde{N}k\right)
+    \end{equation}
+$$
+
+To simplify this expression further, we return to \eqref{eqn:funny_polarization}. If 
+
+$$
+    \langle m\rangle\omega + \widetilde{N}k = 0
+$$
+
+so that \eqref{eqn:yanai_simplified_dispersion} is trivial, then in particular the zonal phase speed $c$ obeys $c<0$. However, \eqref{eqn:funny_polarization} then reduces to 
+
+$$
+    \partial_y \widehat{v} = \frac{\beta y}{c} \widehat{v} \Rightarrow \widehat{v} = \exp\left[\frac{\beta y^2}{2c}\right],
+$$
+
+which is unphysical. We conclude $\langle m\rangle\omega + \widetilde{N}k = 0$, whence \eqref{eqn:yanai_simplified_dispersion} becomes 
+
+$$
+    \begin{equation}
+        \label{eqn:yanai_dispersion_final}
+        \langle m\rangle = \frac{\widetilde{N}}{c^2}\left(c + \frac{\beta}{k^2}\right).
+    \end{equation}
+$$
+
+Since $m\neq 0$ is required for vertical propagation, Yanai waves obey 
+
+$$
+    \begin{equation}
+        \label{eqn:yanai_are_super_rossby}
+        c > -\frac{\beta}{k^2}.
+    \end{equation}
+$$
+
+Accordingly, these waves have a zonal phase speed strictly greater than that of pure Rossby waves. This is why they are not just equatorially-modified Rossby waves! 
+
+### Poincaré/Rossby
+
+Our discussion of these modes is very brief: see \cite{AHL1987} or \cite{Vallis2017} for additional details. These auxiliary waves appear when $n>0$ in \eqref{eqn:eq_wave_disperion_relation}. Notice that this dispersion relation is \emph{quadratic} in $\langle m\rangle$, hence the quadratic formula gives
+
+$$
+    \begin{equation}
+        \langle m \rangle = 
+        \begin{cases}
+        &\widetilde{N}\beta \omega^{-2} \left\{n+\frac12 + \left[\left(n+\frac12\right)^2 + \frac{\omega k}{\beta}\left(1+\frac{\omega k}{\beta}\right) \right]^{\frac12}\right\}
+        \quad \text{(Poincaré branches)},
+        \\
+        &\widetilde{N}\beta \omega^{-2} \left\{n+\frac12 - \left[\left(n+\frac12\right)^2 +\frac{\omega k}{\beta}\left(1+\frac{\omega k}{\beta}\right)\right]^{\frac12}\right\}
+        \quad \text{(Rossby branches)}.
+        \end{cases}
+    \end{equation}
+$$
+
+In the case where $\vert 2Hm\vert \gg 1$, this becomes
+
+$$
+    \begin{equation}
+        m = 
+        \begin{cases}
+        -\mathrm{sgn}(\omega)\hspace{-0.35cm}&\widetilde{N}\beta \omega^{-2} \left\{n+\frac12 + \left[\left(n+\frac12\right)^2 + \frac{\omega k}{\beta}\left(1+\frac{\omega k}{\beta}\right) \right]^{\frac12}\right\}
+        \quad \text{(Poincaré branches)},
+        \\
+        &\widetilde{N}\beta \omega^{-2} \left\{n+\frac12 - \left[\left(n+\frac12\right)^2 +\frac{\omega k}{\beta}\left(1+\frac{\omega k}{\beta}\right)\right]^{\frac12}\right\}
+        \quad \text{(Rossby branches)}.
+        \end{cases}
+    \end{equation}
+$$
+
+after choosing signs to guarantee a positive vertical component of the group velocity. 
+
+### Nondimensional Dispersion Relations in the Case $\vert 2Hm\vert \gg 1$
+
+Suppose the zonal wavenumber $k$ is fixed and $\vert 2Hm\vert$ is very large. We may then define a dimensionless $\omega$ by 
+
+$$
+    \begin{equation}
+        \label{eqn:omegahat}
+        \widehat{\omega} = \frac{\omega k}{\beta}
+    \end{equation}
+$$
+
+and a dimensionless, $H$-modified $m$ by 
+
+$$
+    \begin{equation}
+        \label{eqn:mhat}
+        \widehat{m} = \frac{m\beta}{\widetilde{N}k^2}.
+    \end{equation}
+$$
+
+With these simplifications in mind, the various branches of the dispersion relation reduce to
+
+$$
+    \begin{align}
+        \widehat{m}_{\text{Kelvin}} &= -\frac{1}{\widehat{\omega}},
+        \\
+        \left\vert \widehat{m}_{\text{Yanai}}\right\vert &= \frac{\widehat{\omega} + 1}{\widehat{\omega}^2},
+        \\
+        \widehat{m}_{\text{Poincaré}} &= -\frac{\mathrm{sgn}\widehat{\omega}}{\widehat{\omega}^2} \left\{n+\frac12 + \left[
+            \left(n+\frac12\right)^2 + \widehat{\omega}\left(1+\widehat{\omega}\right)
+        \right]^{\frac12}
+        \right\},
+        \\
+        \widehat{m}_{\text{Rossby}} &= \frac{1}{\widehat{\omega}^2} \left\{n+\frac12 - \left[
+            \left(n+\frac12\right)^2 + \widehat{\omega}\left(1+\widehat{\omega}\right)
+        \right]^{\frac12}
+        \right\}.
+    \end{align}
+$$
+
+The figure below, adapted from figure 4.23 in {% cite AHL1987 %}, summarizes these dispersion relations visually.
+
+<div align="center">
+  <img width="625" height="625" src="assets/img/eq_waves_dispersion.png" />
+</div>
+
+For an analogue of this plot valid in the (tropospherically relevant) case of *no vertical propagation*, see figure 8.6 in {% cite Vallis2017 %}. 
+
+### Propagation Conditions
+
+To end this basic coverage of equatorial waves in the stratosphere, we introduce conditions under which Kelvin and Yanai waves can propagate in a nontrivial background flow. This is a baby step towards understanding the Holton-Lindzen-Plumb theory of the quasi-biennial oscillation or QBO \cite{AHL1987, Baldwin2001}: I hope to return to the subject of QBO modelling in a future post. For simplicity, let's assume $\vert 2Hm\vert\gg 1$ for this last little part of our discussion. 
+
+&nbsp; &nbsp; &nbsp; &nbsp; Now, all the above developments trivially generalize to a situation with a constant zonal background flow 
+
+$$
+    \mathbf{v} = \overline{u} \ \mathbf{\widehat{x}}
+$$
+
+since, by boosting to a frame of reference moving zonally with speed $\overline{u}$, the frequency transforms as
+
+$$
+    \omega \mapsto \omega -\overline{u}k.
+$$
+
+Accordingly, for upward-propagating Kelvin waves, \eqref{eqn:kelvin_upward_branch} implies that the zonal phase speed $c_{\text{Kelvin}}$ obeys
+
+$$
+    c_{\text{Kelvin}} -\overline{u} = \frac{\omega}{k} - \overline{u} = -\frac{\widetilde{N}}{m}.
+$$
+
+However, for Kelvin waves, we already know that upward propagation requires $m<0$ (this is a consequence of their *eastward* zonal phase speed). Consequently, a Kelvin wave in a nontrivial zonal background flow must obey
+
+$$
+    \begin{equation}
+        \overline{u} < c_{\text{Kelvin}}.
+    \end{equation}
+$$
+
+Said differently, Kelvin waves are inhibited within a strong eastward (positive) mean flow. Further, in the "critical limit" $c_{\text{Kelvin}}\rightarrow \overline{u}^{+}$, the dispersion relation requires $m\rightarrow -\infty$. Therefore, the vertical component of the wave's group velocity tends to zero in this limit.  
+
+&nbsp; &nbsp; &nbsp; &nbsp;  We may play a similar game with westward-moving Yanai waves. In this case, a bit of elbow grease and \eqref{eqn:yanai_dispersion_final} tell us that the vertical component of the group velocity is 
+
+$$
+    c_g^{z} = -\frac{\left(\omega-\overline{u}k\right)^2}{\widetilde{N}\left[2\beta + \left(\omega-\overline{u}k\right)k\right]},
+$$
+
+However, from dispersion plot above we find that $c_{g}^z>0$ is required, so the above tells us
+
+$$
+    -\left(c_{\text{Yanai}} - \overline{u}\right) > 0.
+$$
+
+Re-arranging gives 
+
+$$
+    \begin{equation}
+        \overline{u} > c_{\text{Yanai}},
+    \end{equation}
+$$
+
+so a strong westward flow inhibits Yanai wave propagation. This is the opposite condition to that encountered for Kelvin waves! Since Kelvin waves always travel eastward and we have assumed a westward Yanai wave in this discussion, we have found that "like opposes like" when it comes to determining how a background flow opposes wave propagation. Finally, notice that, similar to the Kelvin case, $c_g^z$ vanishes for Yanai waves as $c_{\text{Yanai}}\rightarrow \overline{u}^{-}$. Thus, group velocity vanishes as we approach a critical phase speed, irrespective of whether our waves are Kelvin or Yanai. 
 
 {% bibliography --cited %}
