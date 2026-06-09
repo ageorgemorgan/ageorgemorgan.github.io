@@ -195,4 +195,154 @@ Thus, under Kelvin's assumptions, we have roughly estimated the age of the Earth
 ## Modelling Heat Sources within the Earth
 In formulating the mathematical model \eqref{eqn:kelvin_problem}, we ignored the possibility that there is some chemical reaction within the Earth generating heat. In the later part of the nineteenth century, however, an alternative mechanism for heat generation was discovered: *radioactivity*. That is, in light of radioactive decay of rock within the Earth, we should have a source of heat in our problem. 
 
+&nbsp; &nbsp; &nbsp; &nbsp; Accordingly, we want to pick a suitable function $f(z,t)$ describing heat creation by radioactivity within the Earth. Then, we solve the *inhomogeneous* problem 
+
+$$
+    \begin{equation}
+        \label{eqn:real_problem}
+        \left\{
+            \begin{aligned}
+                T_{t} - \kappa T_{zz} &= f(z,t)
+                \\
+                T\big\vert_{z=0} &= 0
+                \\
+                T\big\vert_{t=0} &= T_{0}
+            \end{aligned},
+        \right.
+    \end{equation}
+$$
+
+compute the geothermal gradient, and solve for $t$ to determine the age of the Earth. 
+&nbsp; &nbsp; &nbsp; &nbsp;  Before experimenting with some simple choices of source function $f(z,t)$, we describe how to solve \eqref{eqn:real_problem} for a general $f(z,t)$ using our knowledge of the half-line heat kernel $G(z,z',t)$. Our strategy is to use **Duhamel's principle**. This consists of the following recipe:
+
+1.  Write $w=T-T^{h}$, where $T^{h}$ solves the homogeneous problem
+    \eqref{eqn:kelvin_problem}. Then, we know that $w$ solves
+
+    $$
+    \left\{
+        \begin{aligned}
+            w_{t} - \kappa w_{zz} &= f(z,t)
+            \\
+            w\big\vert_{z=0} &= 0
+            \\
+            w\big\vert_{t=0} &= 0
+        \end{aligned}.
+    \right.
+    $$
+
+2.  Re-define our (linear!) spatial differential operator by
+    $A=\kappa \partial_{z}^2$, whence the above becomes
+
+    $$
+    \begin{equation}
+        \label{eqn:w_problem}
+        \left\{
+            \begin{aligned}
+                w_{t} - Aw &= f(z,t)
+                \\
+                w\big\vert_{z=0} &= 0
+                \\
+                w\big\vert_{t=0} &= 0
+            \end{aligned}.
+        \right.
+    \end{equation}
+    $$
+
+3.  Since $A$ is really just a matrix on function space, we may use the
+    **method of integrating factors** from ODE theory to formally write
+    
+    $$
+    \partial_{t}\left(e^{-tA}w\right) = -e^{-tA}Aw+e^{-tA}w_{t} = e^{-tA}f.
+    $$
+
+    Integrating the above with respect to $t$ tells us that the solution
+    to \eqref{eqn:w_problem} is given by 
+    $$
+    \begin{aligned}
+        w(z,t) &= e^{tA}w\vert_{t=0}+\int_{0}^{t}e^{(t-s)A}f(z,s) \ \mathrm{d} s \nonumber 
+        \\
+        &= \int_{0}^{t}e^{(t-s)A}f(z,s) \ \mathrm{d} s . 
+    \end{aligned}
+    $$
+
+4.  Remembering the definition of $w$ and that $T^{h}$ is given by \eqref{eqn:kelvin_soln}, we know that 
+
+    $$
+        \begin{equation}
+            \label{eqn:T_general}
+            T(z,t) = T_{0} \ \mathrm{erf}\left(\frac{z}{\sqrt{4\kappa t}}\right) + \int_{0}^{t}e^{(t-s)A}f(z,s) \ \mathrm{d} s.
+        \end{equation}
+    $$
+
+Therefore, to completely solve \eqref{eqn:real_problem}, it remains to sensibly define $e^{tA}$ for $A=\kappa \partial_{z}^2$. We proceed by analogy with the matrix exponential: if $A$ is an $N\times N$ real matrix and $x(t)$ is an $\mathbb{R}^N$-valued function of time, then the ODE
+
+$$
+\begin{equation}
+\left\{
+    \begin{aligned}
+        \frac{\mathrm{d} x}{\mathrm{d} t} - Ax(t) &= 0
+        \\
+        x(0) &= x_{0}
+    \end{aligned}
+\right.
+\end{equation}
+$$
+
+is solved by
+
+$$
+    x(t) = e^{tA}x_{0}, \quad e^{tA} = \sum_{k=0}^{\infty} \frac{1}{k!}\left(tA\right)^{k}. 
+$$
+
+Now, when $A$ is a linear *differential operator* instead of simply a matrix, we can imagine the PDE 
+
+$$
+    v_{t}(z,t)-Av(z,t) =0
+$$
+
+as an ODE in "function space": in other words, $t\mapsto v(z,t)$ is a curve in a real vector space of suitably nice functions of $z$.  By analogy, then, it makes sense to define $e^{tA}v_{0}(z)$ for a suitably nice function $v_{0}(z)$ as the solution to the initial-value problem
+
+$$
+    \left\{
+        \begin{aligned}
+            v_{t}(z,t)-Av(z,t) &=0
+            \\
+            v|_{t=0} &= v_{0}
+        \end{aligned}.
+    \right.
+$$
+
+When we want to impose a homogeneous boundary condition on $e^{tA}v_{0}(z)$ (as in our geochronology problem), we should instead define the exponential as the solution to the initial-boundary-value problem
+
+$$
+    \left\{
+        \begin{aligned}
+            v_{t}(z,t)-Av(z,t) &=0
+            \\
+            v|_{z=0} &= 0 
+            \\
+            v|_{t=0} &= v_{0}
+            \\
+        \end{aligned}.
+    \right.
+$$
+
+In the case $A=\kappa \partial_{z}^2$, then, we know by earlier discussion that 
+
+$$
+    \begin{equation}
+        e^{tA}v_{0}(z) = v(z,t) = \int_{0}^{\infty} G(z,z',t) \ v_{0}(z') \ \mathrm{d} z',
+    \end{equation}
+$$
+
+where $G(z,z',t)$ is defined by \eqref{eqn:half_line_heat_kernel}. We conclude that \eqref{eqn:T_general} can be written more precisely as 
+
+$$
+\begin{equation}
+    \label{eqn:T_specific}
+    T(z,t) = T_{0} \ \mathrm{erf}\left(\frac{z}{\sqrt{4\kappa t}}\right) +\int_{0}^{t} \int_{0}^{\infty} G(z,z',t-s) \ f(z', s) \ \mathrm{d} z' \ \mathrm{d} s. 
+\end{equation}
+$$
+
+
 {% bibliography --cited %}
