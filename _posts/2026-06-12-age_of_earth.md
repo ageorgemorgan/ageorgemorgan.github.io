@@ -72,13 +72,36 @@ $$
 
 In geophysics, $\gamma$ is called the **geothermal gradient**. See Table 1 below for a summary of all parameter values in the model.  
 
-| Parameter  | Name | Value | Units |  
-| :-----: | :-----: | :-----: | :-----: |
-| $T_0$ | Initial Temperature of Earth | $1200$ | $\phantom{0}^{\circ}\mathrm{C}$ |
-| $\kappa$  | Thermal Conductivity of Earth | $6\times 10^{-3}$ | $\text{cm}^2/\text{s}$ |
-| $\gamma$ | Geothermal Gradient | $3\times 10^{-4}$ | $\phantom{0}^{\circ}\text{C}/\text{cm}$ |
+<table align ="center">
+  <tr align="center">
+    <th>Parameter</th>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Units></th>
+  </tr>
+  <tr align="center">
+    <td>$T_0$</td>
+    <td>Initial Temperature of Earth</td>
+    <td>$1200$</td>
+    <td>$\phantom{0}^{\circ}\mathrm{C}$</td>
+  </tr>
+  <tr align="center">
+    <td>$\kappa$</td>
+    <td>Thermal Conductivity of Earth</td>
+    <td>$6\times 10^{-3}$</td>
+    <td>$\text{cm}^2/\text{s}$</td>
+  </tr>
+  <tr align="center">
+    <td>$\gamma$</td>
+    <td>Geothermal Gradient</td>
+    <td>$3\times 10^{-4}$</td> 
+    <td>$\phantom{0}^{\circ}\text{C}/\text{cm}$</td>
+  </tr>
+</table>
 
-**Table 1:** Parameters for the homogeneous problem. 
+<div align="center" style="margin-bottom:1rem">
+    <b>Table 1</b>: Parameters for the homogeneous problem. 
+</div>
 
 &nbsp; &nbsp; &nbsp; &nbsp; Since $\gamma$ is known, we can solve \eqref{eqn:kelvin_problem} to obtain $T(t)$, compute $T_z\big\vert_{z=0}$, set $\gamma=T_z\big\vert_{z=0}$, and solve for $t$ to determine the age of the Earth. Let's put this plan into action! First, we solve the problem \eqref{eqn:kelvin_problem} using the **method of reflection** (also known as the **method of images**, especially in electromagnetic theory). This involves introducing an odd extension of $T(z,t)$ toall of $z\in \mathbb{R}$ according to
 
@@ -164,7 +187,7 @@ $$
 Here is a schematic plot of $T(z,t):
 
 <div align="center">
-  <img width="350" height="350" alt="kelvin soln plot" src="assets/img/kelvin_plot.png"/>
+  <img width="450" height="450" alt="kelvin soln plot" src="assets/img/kelvin_plot.png"/>
 </div>
 
 This pictures tells us that the planetary core $z=\infty$ stays at $T_{0}$, but near the surface $z=0$ there is a buffer region where the temperature quickly transitions from $T_{0}$ to $0$. As time elapses, the size of this buffer region increases, corresponding to gradual cooling of the Earth's interior. Notice also that the solution is always smooth for $t>0$, which is a universal feature of heat flow on the real line. 
@@ -407,15 +430,48 @@ $$
 
 This corresponds to all radioactive material being concentrated in a layer of thickness $H$ below the surface of the Earth. Again, we can take $B=\left(3.25 \times 10^{-10}\right)^{\circ}\text{C}/\text{cm}^2$. For the layer thickness $H$, we assume $H$ is on the order of the mean thickness of the Earth's crust (about $1/640$ of the Earth's radius): a suitable concrete value is $10$ km; see table 2 below for a listing of all parameter values:
 
-| Parameter  | Name | Value | Units |  
-| :-----: | :-----: | :-----: | :-----: |
-| $T_0$ | Initial Temperature of Earth | $1200$ | $\phantom{0}^{\circ}\mathrm{C}$ |
-| $\kappa$  | Thermal Conductivity of Earth | $6\times 10^{-3}$ | $\text{cm}^2/\text{s}$ |
-| $\gamma$ | Geothermal Gradient | $3\times 10^{-4}$ | $\phantom{0}^{\circ}\text{C}/\text{cm}$ |
-| $B$ | Radioactive Heat Source Strength | $3.25 \times 10^{-10}$ | $\phantom{0}^{\circ}\text{C}/\text{cm}^2$|
-| $H$ | Thickness of Radioactive Layer | $10$ | $\text{km}$ |
+<table align ="center">
+  <tr align="center">
+    <th>Parameter</th>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Units></th>
+  </tr>
+  <tr align="center">
+    <td>$T_0$</td>
+    <td>Initial Temperature of Earth</td>
+    <td>$1200$</td>
+    <td>$\phantom{0}^{\circ}\mathrm{C}$</td>
+  </tr>
+  <tr align="center">
+    <td>$\kappa$</td>
+    <td>Thermal Conductivity of Earth</td>
+    <td>$6\times 10^{-3}$</td>
+    <td>$\text{cm}^2/\text{s}$</td>
+  </tr>
+  <tr align="center">
+    <td>$\gamma$</td>
+    <td>Geothermal Gradient</td>
+    <td>$3\times 10^{-4}$</td> 
+    <td>$\phantom{0}^{\circ}\text{C}/\text{cm}$</td>
+  </tr>
+  <tr align="center">
+    <td>$B$</td>
+    <td>Radioactive Heat Source Strength</td>
+    <td>$3.25 \times 10^{-10}$</td>
+    <td>$\phantom{0}^{\circ}\text{C}/\text{cm}^2$</td>
+  </tr>
+  <tr align="center">
+    <td>$H$</td>
+    <td>Thickness of Radioactive Layer</td>
+    <td>$10$</td>
+    <td>$\text{km}$</td>
+  </tr>
+</table>
 
-**Table 2:** Parameters for the inhomogeneous models. 
+<div align="center" style="margin-bottom:1rem">
+    <b>Table 2</b>: Parameters for the inhomogeneous models. 
+</div>
 
 Using \eqref{eqn:T_specific}, we can write the temperature distribution corresponding to this $f$ as
 
