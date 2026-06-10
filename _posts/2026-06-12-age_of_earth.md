@@ -1,7 +1,7 @@
 ---
 math: true
 title: "Estimating the Age of the Earth with the Heat Equation"
-date: 2026-06-08 # TODO: change date when the time comes!!!!!
+date: 2026-06-12
 categories: [Applied Math]
 tags: [diffusion equation, geophysics]     # TAG names should always be lowercase
 ---
@@ -21,12 +21,12 @@ roughly based on the assumptions below:
     rock);
 
 2.  the temperature at the Earth's surface is at a reference value
-    $0^{\circ}$C;
+    $0^{\circ}\text{C}$;
 
 3.  the Earth's curvature has a negligible effect on the distribution of
-    temperature throughout the crust;
+    temperature throughout the planetary crust (said differently, the crust can be approximated as infinitely thick);
 
-4.  the inside of the Earth is (on average) not moving, so that heat can
+4.  the crust of the Earth is (on average) not moving, so that heat can
     only be transported via conduction;
 
 5.  the Earth's crust is materially homogeneous, so the thermal
@@ -184,7 +184,7 @@ $$
 \mathrm{erf}(y) = \frac{2}{\sqrt{\pi}}\int_{0}^{y} e^{-w^2} \ \mathrm{d} w. 
 $$
 
-Here is a schematic plot of $T(z,t):
+Here is a schematic plot of $T(z,t)$:
 
 <div align="center">
   <img width="450" height="450" alt="kelvin soln plot" src="assets/img/kelvin_plot.png"/>
@@ -240,6 +240,7 @@ $$
 $$
 
 compute the geothermal gradient, and solve for $t$ to determine the age of the Earth. 
+
 &nbsp; &nbsp; &nbsp; &nbsp;  Before experimenting with some simple choices of source function $f(z,t)$, we describe how to solve \eqref{eqn:real_problem} for a general $f(z,t)$ using our knowledge of the half-line heat kernel $G(z,z',t)$. Our strategy is to use **Duhamel's principle**. This consists of the following recipe:
 
 1.  Write $w=T-T^{h}$, where $T^{h}$ solves the homogeneous problem
@@ -275,7 +276,7 @@ compute the geothermal gradient, and solve for $t$ to determine the age of the E
     \end{equation}
     $$
 
-3.  Since $A$ is really just a matrix on function space, we may use the
+3.  Since $A$ is really just a matrix on "function space", we may use the
     **method of integrating factors** from ODE theory to formally write
     
     $$
@@ -372,7 +373,7 @@ $$
 $$
 
 
-> Our definition of the exponential of a differential operator as the solution to an ODE in a space other than $\mathbb{R}^n$ generalizes nicely to other contexts. For instance, the exponential on a general Lie group is also defined by solving an ODE, with an element of the corresponding Lie algebra serving as initial data; see for example chapter 7 of \cite{Lee2013}. 
+> Our definition of the exponential of a differential operator as the solution to an ODE in a space other than $\mathbb{R}^n$ generalizes nicely to other contexts. For instance, the exponential on a general Lie group is also defined by solving an ODE, with an element of the corresponding Lie algebra serving as initial data; see for example chapter 7 of {% cite Lee2013 %}. 
 {: .prompt-info }
 
 > Viewing a PDE as an ODE on a function space is the starting point for the **semigroup approach** to solving initial-value problems. In this context, we say that the family of integral operators $$ \left\{e^{\kappa t\partial_{z}^2} \ \vert \ t\geq 0\right\} $$ 
