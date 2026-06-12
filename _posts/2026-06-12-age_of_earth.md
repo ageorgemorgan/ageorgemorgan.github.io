@@ -77,7 +77,7 @@ In geophysics, $\gamma$ is called the **geothermal gradient**. See Table 1 below
     <th>Parameter</th>
     <th>Name</th>
     <th>Value</th>
-    <th>Units></th>
+    <th>Units</th>
   </tr>
   <tr align="center">
     <td>$T_0$</td>
@@ -436,7 +436,7 @@ This corresponds to all radioactive material being concentrated in a layer of th
     <th>Parameter</th>
     <th>Name</th>
     <th>Value</th>
-    <th>Units></th>
+    <th>Units</th>
   </tr>
   <tr align="center">
     <td>$T_0$</td>
